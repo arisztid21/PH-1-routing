@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Home from './Home/Home';
 import About from './About/About';
-import {Route, Link} from 'react-router-dom'
+import { Route, Link } from 'react-router-dom';
 import FAQ from './About/FAQ/FAQ';
 import Company from './About/Company/Company';
 
@@ -13,12 +13,12 @@ class App extends Component {
         <nav>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
-        </nav> 
-        <Route exact path='/' component={Home}/>
-        <Route path='/about' render={()=> <About>
-        <Route path='/about/faq' component={FAQ}/>
-        <Route path='/about/company' component={Company}/>
-        </About>}/>
+        </nav>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" render={() => <About>
+          <Route path="/about/faq" component={FAQ} />
+          <Route path="/about/company" component={Company} />
+        </About>} />
       </div>
     );
   }
